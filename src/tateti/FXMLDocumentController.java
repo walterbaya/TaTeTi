@@ -47,7 +47,7 @@ public class FXMLDocumentController implements Initializable {
         if (clickCounter == 1) {
             int i = new Random().nextInt(botones.length);
             System.out.println(i);
-            botones[i].setText("Negro");
+            botones[i].setText("black");
             botones[i].setDisable(true);
         }
     }
@@ -55,7 +55,7 @@ public class FXMLDocumentController implements Initializable {
     //Si el centro no esta ocupado la maquina lo pone en el centro
     private void botPlay() {
         if (matriz[1][1] != 1) {
-            button5.setText("negro");
+            button5.setText("black");
         } else {
             takeADecision();
         }
@@ -63,7 +63,7 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void setTextButton1() {
-        button1.setText("Blanco");
+        button1.setText("white");
         matriz[0][0] = 1;
         alertaWhiteWins();
         button1.setDisable(true);
@@ -74,7 +74,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void setTextButton2() {
 
-        button2.setText("Blanco");
+        button2.setText("white");
         matriz[0][1] = 1;
         alertaWhiteWins();
         button2.setDisable(true);
@@ -85,7 +85,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void setTextButton3() {
 
-        button3.setText("Blanco");
+        button3.setText("white");
         matriz[0][2] = 1;
         alertaWhiteWins();
 
@@ -97,7 +97,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void setTextButton4() {
 
-        button4.setText("Blanco");
+        button4.setText("white");
         matriz[1][0] = 1;
         alertaWhiteWins();
 
@@ -109,7 +109,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void setTextButton5() {
 
-        button5.setText("Blanco");
+        button5.setText("white");
         matriz[1][1] = 1;
         alertaWhiteWins();
 
@@ -121,7 +121,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void setTextButton6() {
 
-        button6.setText("Blanco");
+        button6.setText("white");
         matriz[1][2] = 1;
         alertaWhiteWins();
 
@@ -133,7 +133,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void setTextButton7() {
 
-        button7.setText("Blanco");
+        button7.setText("white");
         matriz[2][0] = 1;
         alertaWhiteWins();
 
@@ -145,7 +145,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void setTextButton8() {
 
-        button8.setText("Blanco");
+        button8.setText("white");
         matriz[2][1] = 1;
         alertaWhiteWins();
 
@@ -157,11 +157,11 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void setTextButton9() {
         if (clickCounter % 2 == 0) {
-            button9.setText("Blanco");
+            button9.setText("white");
             matriz[2][2] = 1;
             alertaWhiteWins();
         } else {
-            button9.setText("Negro");
+            button9.setText("black");
             matriz[2][2] = 2;
             alertBlackWins();
         }
@@ -173,8 +173,8 @@ public class FXMLDocumentController implements Initializable {
     private void alertaWhiteWins() {
         if (whiteWins()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("VICTORIA!");
-            alert.setContentText("Gano Blanco!");
+            alert.setTitle("Victory!");
+            alert.setContentText("White wins!");
             alert.showAndWait();
             Platform.exit();
         }
@@ -184,8 +184,8 @@ public class FXMLDocumentController implements Initializable {
     private void alertBlackWins() {
         if (blackWins()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("VICTORIA!");
-            alert.setContentText("Gano Negro!");
+            alert.setTitle("Victory!");
+            alert.setContentText("Black wins!");
             alert.showAndWait();
             Platform.exit();
         }
