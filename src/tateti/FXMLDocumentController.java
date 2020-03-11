@@ -1,7 +1,6 @@
 package tateti;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.application.Platform;
@@ -9,168 +8,170 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.util.Pair;
 
 public class FXMLDocumentController implements Initializable {
+ 
+    @FXML
+    private Button button1;
+    @FXML
+    private Button button2;
+    @FXML
+    private Button button3;
+    @FXML
+    private Button button4;
+    @FXML
+    private Button button5;
+    @FXML
+    private Button button6;
+    @FXML
+    private Button button7;
+    @FXML
+    private Button button8;
+    @FXML
+    private Button button9;
 
-    @FXML
-    private Button boton1;
-    @FXML
-    private Button boton2;
-    @FXML
-    private Button boton3;
-    @FXML
-    private Button boton4;
-    @FXML
-    private Button boton5;
-    @FXML
-    private Button boton6;
-    @FXML
-    private Button boton7;
-    @FXML
-    private Button boton8;
-    @FXML
-    private Button boton9;
+    int clickCounter = 0;
+    
+    boolean blackWins = false;
 
-    int nroClick = 0;
+    boolean whiteWins = false;
+    
+    /*Black player is been represented with a number 2 in the matrix and
+      White player with a number 1
+    */
+    
+    private int[][] matriz = new int[3][3];
 
-    boolean ganoNegro = false;
-
-    boolean ganoBlanco = false;
-
-   
-
-    private void tomarDesicion() {
-        Button[] botones = {boton1, boton2, boton3, boton4, boton6, boton7, boton8, boton9};
-        if (nroClick == 1) {
+    private void takeADecision() {
+        Button[] botones = {button1, button2, button3, button4, button6, button7, button8, button9};
+        if (clickCounter == 1) {
             int i = new Random().nextInt(botones.length);
             System.out.println(i);
             botones[i].setText("Negro");
             botones[i].setDisable(true);
         }
     }
-    private int[][] matriz = new int[3][3];
-
+    
     //Si el centro no esta ocupado la maquina lo pone en el centro
-    private void jugarMaquina() {
+    private void botPlay() {
         if (matriz[1][1] != 1) {
-            boton5.setText("negro");
+            button5.setText("negro");
         } else {
-            tomarDesicion();
+            takeADecision();
         }
     }
 
     @FXML
     private void setTextButton1() {
-        boton1.setText("Blanco");
+        button1.setText("Blanco");
         matriz[0][0] = 1;
-        alertaGanoBlanco();
-        boton1.setDisable(true);
-        nroClick++;
-        jugarMaquina();
+        alertaWhiteWins();
+        button1.setDisable(true);
+        clickCounter++;
+        botPlay();
     }
 
     @FXML
     private void setTextButton2() {
 
-        boton2.setText("Blanco");
+        button2.setText("Blanco");
         matriz[0][1] = 1;
-        alertaGanoBlanco();
-        boton2.setDisable(true);
-        nroClick++;
-        jugarMaquina();
+        alertaWhiteWins();
+        button2.setDisable(true);
+        clickCounter++;
+        botPlay();
     }
 
     @FXML
     private void setTextButton3() {
 
-        boton3.setText("Blanco");
+        button3.setText("Blanco");
         matriz[0][2] = 1;
-        alertaGanoBlanco();
+        alertaWhiteWins();
 
-        boton3.setDisable(true);
-        nroClick++;
-        jugarMaquina();
+        button3.setDisable(true);
+        clickCounter++;
+        botPlay();
     }
 
     @FXML
     private void setTextButton4() {
 
-        boton4.setText("Blanco");
+        button4.setText("Blanco");
         matriz[1][0] = 1;
-        alertaGanoBlanco();
+        alertaWhiteWins();
 
-        boton4.setDisable(true);
-        nroClick++;
-        jugarMaquina();
+        button4.setDisable(true);
+        clickCounter++;
+        botPlay();
     }
 
     @FXML
     private void setTextButton5() {
 
-        boton5.setText("Blanco");
+        button5.setText("Blanco");
         matriz[1][1] = 1;
-        alertaGanoBlanco();
+        alertaWhiteWins();
 
-        boton5.setDisable(true);
-        nroClick++;
-        jugarMaquina();
+        button5.setDisable(true);
+        clickCounter++;
+        botPlay();
     }
 
     @FXML
     private void setTextButton6() {
 
-        boton6.setText("Blanco");
+        button6.setText("Blanco");
         matriz[1][2] = 1;
-        alertaGanoBlanco();
+        alertaWhiteWins();
 
-        boton6.setDisable(true);
-        nroClick++;
-        jugarMaquina();
+        button6.setDisable(true);
+        clickCounter++;
+        botPlay();
     }
 
     @FXML
     private void setTextButton7() {
 
-        boton7.setText("Blanco");
+        button7.setText("Blanco");
         matriz[2][0] = 1;
-        alertaGanoBlanco();
+        alertaWhiteWins();
 
-        boton7.setDisable(true);
-        nroClick++;
-        jugarMaquina();
+        button7.setDisable(true);
+        clickCounter++;
+        botPlay();
     }
 
     @FXML
     private void setTextButton8() {
 
-        boton8.setText("Blanco");
+        button8.setText("Blanco");
         matriz[2][1] = 1;
-        alertaGanoBlanco();
+        alertaWhiteWins();
 
-        boton8.setDisable(true);
-        nroClick++;
-        jugarMaquina();
+        button8.setDisable(true);
+        clickCounter++;
+        botPlay();
     }
 
     @FXML
     private void setTextButton9() {
-        if (nroClick % 2 == 0) {
-            boton9.setText("Blanco");
+        if (clickCounter % 2 == 0) {
+            button9.setText("Blanco");
             matriz[2][2] = 1;
-            alertaGanoBlanco();
+            alertaWhiteWins();
         } else {
-            boton9.setText("Negro");
+            button9.setText("Negro");
             matriz[2][2] = 2;
-            alertaGanoNegro();
+            alertBlackWins();
         }
-        boton9.setDisable(true);
-        nroClick++;
-        jugarMaquina();
+        button9.setDisable(true);
+        clickCounter++;
+        botPlay();
     }
 
-    private void alertaGanoBlanco() {
-        if (ganoBlanco()) {
+    private void alertaWhiteWins() {
+        if (whiteWins()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("VICTORIA!");
             alert.setContentText("Gano Blanco!");
@@ -180,8 +181,8 @@ public class FXMLDocumentController implements Initializable {
 
     }
 
-    private void alertaGanoNegro() {
-        if (ganoNegro()) {
+    private void alertBlackWins() {
+        if (blackWins()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("VICTORIA!");
             alert.setContentText("Gano Negro!");
@@ -191,7 +192,11 @@ public class FXMLDocumentController implements Initializable {
 
     }
 
-    private boolean ganoBlanco() {
+    private boolean gameOver() {
+         return (whiteWins()||blackWins()||tiedGame()); 
+    }
+
+    private boolean whiteWins() {
         if (matriz[0][0] == matriz[0][1] && matriz[0][1] == matriz[0][2] && matriz[0][0] == 1
                 || matriz[1][0] == matriz[1][1] && matriz[1][1] == matriz[1][2] && matriz[1][0] == 1
                 || matriz[2][0] == matriz[2][1] && matriz[2][1] == matriz[2][2] && matriz[2][0] == 1
@@ -201,15 +206,15 @@ public class FXMLDocumentController implements Initializable {
                 || matriz[0][0] == matriz[1][1] && matriz[1][1] == matriz[2][2] && matriz[0][0] == 1
                 || matriz[0][2] == matriz[1][1] && matriz[1][1] == matriz[2][0] && matriz[0][2] == 1) {
 
-            ganoBlanco = true;
+            whiteWins = true;
         } else {
 
         }
-        return ganoBlanco;
+        return whiteWins;
 
     }
 
-    private boolean ganoNegro() {
+    private boolean blackWins() {
         if (matriz[0][0] == matriz[0][1] && matriz[0][1] == matriz[0][2] && matriz[0][0] == 2
                 || matriz[1][0] == matriz[1][1] && matriz[1][1] == matriz[1][2] && matriz[1][0] == 2
                 || matriz[2][0] == matriz[2][1] && matriz[2][1] == matriz[2][2] && matriz[2][0] == 2
@@ -219,16 +224,20 @@ public class FXMLDocumentController implements Initializable {
                 || matriz[0][0] == matriz[1][1] && matriz[1][1] == matriz[2][2] && matriz[0][0] == 2
                 || matriz[0][2] == matriz[1][1] && matriz[1][1] == matriz[2][0] && matriz[0][2] == 2) {
 
-            ganoNegro = true;
+            blackWins = true;
         } else {
 
         }
-        return ganoNegro;
+        return blackWins;
 
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+    }
+
+    private boolean tiedGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
