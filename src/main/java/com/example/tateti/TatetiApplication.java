@@ -1,5 +1,6 @@
 package com.example.tateti;
 
+import com.example.tateti.model.Board;
 import com.example.tateti.model.BotPlayer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,9 +26,11 @@ public class TatetiApplication implements CommandLineRunner {
 
 		BotPlayer bot = new BotPlayer();
 		//HumanPlayer hp = new HumanPlayer();
-		bot.play(1,1);
+		bot.play(0,0,board);
+		bot.play(board);
+		bot.play(board);
 		//hp.play(2,1);
 		//board.setPosition(0,0,true);
-		//log.info("se imprime tablero de posiciones: " + board.printPositions());
+		log.info("se imprime tablero de posiciones: " + board.toString());
 	}
 }

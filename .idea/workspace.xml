@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2deedfc7-531a-42fc-a4dc-8025ff089686" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tateti/model/BotPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tictactoe/tictactoe/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tictactoe/tictactoe/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/tictactoe/tictactoe/hello-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tictactoe/tictactoe/HelloApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tictactoe/tictactoe/HelloController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tictactoe/tictactoe/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tateti/TatetiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tateti/TatetiApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1645046212189</updated>
       <workItem from="1645046213928" duration="12426000" />
+      <workItem from="1645120914073" duration="10811000" />
     </task>
     <servers />
   </component>
