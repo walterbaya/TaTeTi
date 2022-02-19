@@ -23,14 +23,14 @@ public class TaTeTiController {
     @Autowired
     BotPlayer botPlayer;
 
-    @CrossOrigin(origins = "null")
+    @CrossOrigin(origins = "*")
     @PostMapping(path = "/humanPlay", consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Board> humanPlay(@RequestBody Position position) {
+    public ResponseEntity<Position> humanPlay(@RequestBody Position position) {
         humanPlayer.play(position);
         Position pcPosition = botPlayer.play();
         System.out.println("row: " + pcPosition.row + "col" + pcPosition.col);
         HttpHeaders headers = new HttpHeaders();
-        return ResponseEntity.ok().headers(headers).body(board);
+        return ResponseEntity.ok().headers(headers).body(pcPosition);
     }
 }

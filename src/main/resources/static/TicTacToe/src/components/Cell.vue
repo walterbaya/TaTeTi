@@ -1,20 +1,25 @@
 <template>
     <div>
-        <img v-bind:src="getImage" alt="">
+        <img v-bind:src="getImage()" alt="">
     </div>
 </template>
 
 <script>
+
+import circle from "../assets/img/circle.png";
+import cross from "../assets/img/cross.png";
+
+
 export default {
     name: 'Cell',
     props: {
-        cell_number: Number,
-        draw: String
+        position: Object,
+        image: String
     },
     methods: {
         getImage(){
-            console.log(require('../assets/img/' + draw + '.png'));
-            return require('../assets/img/' + draw + '.png');
+           console.log(circle);
+           return circle;
         } 
     },
     data() {

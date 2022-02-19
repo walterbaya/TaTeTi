@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2deedfc7-531a-42fc-a4dc-8025ff089686" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tateti/controller/TaTeTiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tateti/TatetiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tateti/TatetiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tateti/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tateti/model/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tateti/model/BotPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tateti/model/BotPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tateti/model/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tateti/model/HumanPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tateti/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tateti/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tateti/model/TaTeTiConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tateti/controller/TaTeTiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tateti/controller/TaTeTiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/TicTacToe/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/TicTacToe/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/TicTacToe/src/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/TicTacToe/src/assets/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/TicTacToe/src/components/Cell.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/TicTacToe/src/components/Cell.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +107,7 @@
       <workItem from="1645120914073" duration="10953000" />
       <workItem from="1645205258497" duration="17481000" />
       <workItem from="1645226987435" duration="8361000" />
+      <workItem from="1645287008477" duration="7668000" />
     </task>
     <servers />
   </component>
