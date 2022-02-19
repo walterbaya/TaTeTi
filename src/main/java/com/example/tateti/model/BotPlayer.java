@@ -1,19 +1,16 @@
 package com.example.tateti.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BotPlayer implements Player {
 
+    @Autowired
+    private Board board;
+
     private char player = 'x';
     private char opponent = 'o';
-
-    static class Move
-    {
-        int row, col;
-    };
 
     // Returns true if there are moves
     // remaining on the board, otherwise returns false
@@ -113,9 +110,9 @@ public class BotPlayer implements Player {
     }
 
     // Return the best possible move for the player
-    private Move findBestMove(Board board) {
+    private Position findBestMove(Board board) {
         int bestVal = -1000;
-        Move bestMove = new Move();
+        Position bestMove = new Position();
         bestMove.row = -1;
         bestMove.col = -1;
 
@@ -151,14 +148,15 @@ public class BotPlayer implements Player {
         return bestMove;
     }
 
-    public void play(int i, int j, Board board) {
-        if(board.getPositions()[i][j] != '_') {
-            board.getPositions()[i][j] = 'x';
-        }
+    public Position play() {
+        Position bestMove = findBestMove(board);
+        board.getPositions()[bestMove.row][bestMove.col] = 'x';
+        return bestMove;
     }
 
-    public void play(Board board) {
-        Move bestMove = findBestMove(board);
-        board.getPositions()[bestMove.row][bestMove.col] = 'x';
+    public void play(Position position) {
+        if(board.getPositions()[position.row][position.col] == '_') {
+            board.getPositions()[position.row][position.col] = 'x';
+        }
     }
 }
