@@ -21,7 +21,7 @@
         <td>
           <Cell
             v-on:click="setIcon({ row: 1, col: 0 })"
-            v-bind:image="this.cel10"
+            v-bind:image="this.board.cell10"
           ></Cell>
         </td>
         <td>
