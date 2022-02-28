@@ -9,12 +9,16 @@
           ></Cell>
         </td>
         <td>
-          <Cell v-on:click="setIcon({ row: 0, col: 1 })"
-          v-bind:image="this.board.cell01"></Cell>
+          <Cell
+            v-on:click="setIcon({ row: 0, col: 1 })"
+            v-bind:image="this.board.cell01"
+          ></Cell>
         </td>
         <td>
-          <Cell v-on:click="setIcon({ row: 0, col: 2 })"
-          v-bind:image="this.board.cell02"></Cell>
+          <Cell
+            v-on:click="setIcon({ row: 0, col: 2 })"
+            v-bind:image="this.board.cell02"
+          ></Cell>
         </td>
       </tr>
       <tr>
@@ -25,26 +29,36 @@
           ></Cell>
         </td>
         <td>
-          <Cell v-on:click="setIcon({ row: 1, col: 1 })"
-          v-bind:image="this.board.cell11"></Cell>
+          <Cell
+            v-on:click="setIcon({ row: 1, col: 1 })"
+            v-bind:image="this.board.cell11"
+          ></Cell>
         </td>
         <td>
-          <Cell v-on:click="setIcon({ row: 1, col: 2 })"
-          v-bind:image="this.board.cell12"></Cell>
+          <Cell
+            v-on:click="setIcon({ row: 1, col: 2 })"
+            v-bind:image="this.board.cell12"
+          ></Cell>
         </td>
       </tr>
       <tr>
         <td>
-          <Cell v-on:click="setIcon({ row: 2, col: 0 })"
-          v-bind:image="this.board.cell20"></Cell>
+          <Cell
+            v-on:click="setIcon({ row: 2, col: 0 })"
+            v-bind:image="this.board.cell20"
+          ></Cell>
         </td>
         <td>
-          <Cell v-on:click="setIcon({ row: 2, col: 1 })"
-          v-bind:image="this.board.cell21"></Cell>
+          <Cell
+            v-on:click="setIcon({ row: 2, col: 1 })"
+            v-bind:image="this.board.cell21"
+          ></Cell>
         </td>
         <td>
-          <Cell v-on:click="setIcon({ row: 2, col: 2 })"
-          v-bind:image="this.board.cell22"></Cell>
+          <Cell
+            v-on:click="setIcon({ row: 2, col: 2 })"
+            v-bind:image="this.board.cell22"
+          ></Cell>
         </td>
       </tr>
     </table>
@@ -94,11 +108,21 @@ export default {
         .then((response) => {
           let positionBot = response.data;
           console.log(positionBot.row);
-          this.board['cell' + positionBot.row + "" + positionBot.col] = icon.cross;
+          this.board["cell" + positionBot.row + "" + positionBot.col] =
+            icon.cross;
+          this.isGameOver();
         })
         .catch((error) => console.log(error));
 
       this.board["cell" + position.row + "" + position.col] = icon.circle;
+    },
+    isGameOver() {
+      axios
+        .get("/isGameOver")
+        .then((response) => {
+          console.log("El ganador es: " + response.data);
+        })
+        .catch((error) => console.log(error));
     },
   },
 };

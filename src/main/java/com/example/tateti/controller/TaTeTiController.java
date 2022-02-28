@@ -24,16 +24,19 @@ public class TaTeTiController {
     BotPlayer botPlayer;
 
     @CrossOrigin(origins = "*")
+    @GetMapping(path = "/isGameOver")
+    public ResponseEntity<Integer> isGameOver() {
+        HttpHeaders headers = new HttpHeaders();
+        return ResponseEntity.ok().headers(headers).body(board.evaluate());
+    }
+
+    @CrossOrigin(origins = "*")
     @PostMapping(path = "/humanPlay", consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Position> humanPlay(@RequestBody Position position) {
         humanPlayer.play(position);
-        //Position pcPosition = botPlayer.play();
-        Position pcPosition = position;
+        Position pcPosition = botPlayer.play();
         HttpHeaders headers = new HttpHeaders();
-        if(board.isGameOver()){
-            System.out.println("Is column full");
-        }
         return ResponseEntity.ok().headers(headers).body(pcPosition);
     }
 }
