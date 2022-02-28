@@ -26,8 +26,20 @@ public class TaTeTiController {
     @CrossOrigin(origins = "*")
     @GetMapping(path = "/isGameOver")
     public ResponseEntity<Integer> isGameOver() {
+        Integer res = 0;
         HttpHeaders headers = new HttpHeaders();
-        return ResponseEntity.ok().headers(headers).body(board.evaluate());
+        if(!board.isMovesLeft()){
+            if(board.evaluate() == 0){
+                res = 1;
+            }
+            else if(board.evaluate() == 10){
+                res = 10;
+            }
+            else if(board.evaluate() == -10){
+                res = -10;
+            }
+        }
+        return ResponseEntity.ok().headers(headers).body(res);
     }
 
     @CrossOrigin(origins = "*")
