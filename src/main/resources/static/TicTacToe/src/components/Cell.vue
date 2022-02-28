@@ -9,13 +9,7 @@
 export default {
     name: 'Cell',
     props: {
-        position: Object,
         image: String
-    },
-    data() {
-        return {
-            pressed: false
-        }
-    },
+    }
 }
 </script>
