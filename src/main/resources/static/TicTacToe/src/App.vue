@@ -121,6 +121,7 @@ export default {
         .get("/isGameOver")
         .then((response) => {
           console.log("El ganador es: " + response.data);
+          
         })
         .catch((error) => console.log(error));
     },

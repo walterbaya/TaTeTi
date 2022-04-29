@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2deedfc7-531a-42fc-a4dc-8025ff089686" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tateti/controller/TaTeTiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tateti/controller/TaTeTiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/TicTacToe/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/TicTacToe/src/App.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../compras_salud" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected="Spring Boot.TatetiApplication">
@@ -109,6 +108,7 @@
       <workItem from="1646014735691" duration="4238000" />
       <workItem from="1646068551451" duration="10687000" />
       <workItem from="1646079454026" duration="902000" />
+      <workItem from="1649767317654" duration="123000" />
     </task>
     <servers />
   </component>
